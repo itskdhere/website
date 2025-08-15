@@ -58,7 +58,7 @@ export function NavBar() {
   ];
 
   return (
-    <nav className="absolute flex items-center justify-center mt-10 w-full z-5 opacity-95">
+    <nav className="fixed flex items-center justify-center mt-10 w-full z-5 opacity-95">
       <FloatingDock items={links} />
     </nav>
   );

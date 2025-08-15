@@ -12,7 +12,7 @@ export default function Hero() {
   );
 
   return (
-    <section className="w-full h-screen">
+    <section id="#" className="w-full h-screen">
       <div className="absolute size-full pointer-events-none">
         <LightRays
           raysOrigin="top-center"
@@ -47,7 +47,7 @@ export default function Hero() {
             />
             <SplitText
               text="I'm Krishnendu Das"
-              className="text-3xl sm:text-4xl mt-2 font-semibold"
+              className="text-3xl sm:text-4xl mt-2 font-semibold text-left!"
               delay={70}
               duration={2}
               ease="elastic.out(1, 0.3)"
@@ -90,7 +90,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center overflow-hidden size-full">
+        <div className="hidden sm:flex flex-col sm:flex-row items-center justify-center overflow-hidden size-full">
           <IconCloud images={iconCloudImages} />
         </div>
       </div>
