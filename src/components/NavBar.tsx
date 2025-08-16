@@ -5,7 +5,7 @@ import { FloatingDock } from "@/components/ui/floating-dock";
 import {
   IconHome,
   IconInfoCircle,
-  IconTool,
+  IconBulb,
   IconTools,
   IconSchool,
   IconMail,
@@ -30,7 +30,7 @@ export function NavBar() {
     {
       title: "Skills",
       icon: (
-        <IconTool className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconBulb className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#skills",
     },
