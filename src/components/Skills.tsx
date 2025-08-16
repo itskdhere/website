@@ -12,7 +12,7 @@ export default function Skills() {
   return (
     <section id="#skills" className="w-full">
       <Pointer>
-        <IconBulbFilled size={25} className="-rotate-12 text-amber-300" />
+        <IconBulbFilled size={26} className="-rotate-12 text-amber-300" />
       </Pointer>
 
       <div className="flex flex-col items-start justify-center size-full w-fit sm:w-full max-w-6xl mx-auto my-15 px-3 md:px-10 gap-1.5">

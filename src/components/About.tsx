@@ -9,7 +9,7 @@ export default function About() {
   return (
     <section id="#about" className="w-full">
       <Pointer>
-        <IconInfoHexagonFilled size={25} className="-rotate-12 text-teal-400" />
+        <IconInfoHexagonFilled size={22} className="-rotate-12 text-teal-400" />
       </Pointer>
 
       <div className="flex flex-col items-start justify-center size-full w-fit sm:w-full max-w-6xl mx-auto mb-15 px-3 md:px-10 gap-1.5">

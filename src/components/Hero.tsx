@@ -1,18 +1,24 @@
 "use client";
 
+import { Pointer } from "@/components/magicui/pointer";
 import LightRays from "@/components/blocks/Backgrounds/LightRays/LightRays";
 import SplitText from "@/components/blocks/TextAnimations/SplitText/SplitText";
 import { RippleButton } from "@/components/magicui/ripple-button";
 import { IconCloud } from "@/components/magicui/icon-cloud";
-import { iconSlugs } from "@/data/hero";
+import { IconPointerFilled } from "@tabler/icons-react";
+import { heroData, heroIconSlugs } from "@/data/hero";
 
 export default function Hero() {
-  const iconCloudImages = iconSlugs.map(
+  const iconCloudImages = heroIconSlugs.map(
     (iconSlug) => `https://cdn.simpleicons.org/${iconSlug}/${iconSlug}`
   );
 
   return (
     <section id="#" className="w-full h-screen">
+      <Pointer>
+        <IconPointerFilled size={20} className="rotate-12" />
+      </Pointer>
+
       <div className="absolute size-full pointer-events-none">
         <LightRays
           raysOrigin="top-center"
@@ -33,7 +39,7 @@ export default function Hero() {
         <div className="flex flex-row items-center justify-center size-full w-fit sm:w-full">
           <div className="flex flex-col items-start justify-center gap-1.5">
             <SplitText
-              text="Hi there,"
+              text={heroData.greeting}
               className="text-4xl sm:text-5xl font-serif"
               delay={70}
               duration={2}
@@ -46,7 +52,7 @@ export default function Hero() {
               textAlign="center"
             />
             <SplitText
-              text="I'm Krishnendu Das"
+              text={heroData.name}
               className="text-3xl sm:text-4xl mt-2 font-semibold text-left!"
               delay={70}
               duration={2}
@@ -59,7 +65,7 @@ export default function Hero() {
               textAlign="center"
             />
             <SplitText
-              text="(a.k.a. kd / itskdhere)"
+              text={heroData.alias}
               className="text-lg sm:text-xl mb-2 italic font-thin"
               delay={70}
               duration={2}
@@ -72,7 +78,7 @@ export default function Hero() {
               textAlign="center"
             />
             <SplitText
-              text="Full-Stack Developer"
+              text={heroData.role}
               className="text-xl sm:text-2xl font-mono"
               delay={70}
               duration={2}
@@ -85,7 +91,7 @@ export default function Hero() {
               textAlign="center"
             />
             <RippleButton rippleColor="#ADD8E6" className="mt-10">
-              Learn more
+              {heroData.cta1}
             </RippleButton>
           </div>
         </div>

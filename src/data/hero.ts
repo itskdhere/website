@@ -1,4 +1,12 @@
-export const iconSlugs = [
+export const heroData = {
+  greeting: "Hi there,",
+  name: "I'm Krishnendu Das",
+  alias: "(a.k.a. kd / itskdhere)",
+  role: "Full-Stack Developer",
+  cta1: "Learn more",
+};
+
+export const heroIconSlugs = [
   "c",
   "cplusplus",
   "typescript",
