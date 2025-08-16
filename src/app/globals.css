@@ -129,4 +129,10 @@
   body {
     @apply bg-background text-foreground;
   }
+  a {
+    @apply hover:cursor-none;
+  }
+  button {
+    @apply hover:cursor-none;
+  }
 }
