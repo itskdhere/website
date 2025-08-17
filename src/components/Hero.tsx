@@ -1,11 +1,9 @@
 "use client";
 
-import { Pointer } from "@/components/magicui/pointer";
 import LightRays from "@/components/blocks/Backgrounds/LightRays/LightRays";
 import SplitText from "@/components/blocks/TextAnimations/SplitText/SplitText";
 import { RippleButton } from "@/components/magicui/ripple-button";
 import { IconCloud } from "@/components/magicui/icon-cloud";
-import { IconPointerFilled } from "@tabler/icons-react";
 import { heroData, heroIconSlugs } from "@/data/hero";
 
 export default function Hero() {
@@ -15,10 +13,6 @@ export default function Hero() {
 
   return (
     <section id="#" className="w-full h-screen">
-      <Pointer>
-        <IconPointerFilled size={20} className="rotate-12" />
-      </Pointer>
-
       <div className="absolute size-full pointer-events-none">
         <LightRays
           raysOrigin="top-center"
@@ -90,7 +84,10 @@ export default function Hero() {
               rootMargin="-100px"
               textAlign="center"
             />
-            <RippleButton rippleColor="#ADD8E6" className="mt-10">
+            <RippleButton
+              rippleColor="#ADD8E6"
+              className="mt-10 hover:cursor-pointer"
+            >
               {heroData.cta1}
             </RippleButton>
           </div>

@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { Pointer } from "@/components/magicui/pointer";
 import { Highlighter } from "@/components/magicui/highlighter";
 import SpotlightCard from "@/components/blocks/Components/SpotlightCard/SpotlightCard";
 import {
@@ -14,7 +13,6 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
-  IconBulbFilled,
   IconLink,
   IconWorld,
   IconPackage,
@@ -25,10 +23,6 @@ import { projectsData } from "@/data/projects";
 export default function Projects() {
   return (
     <section id="#projects" className="w-full">
-      <Pointer>
-        <IconBulbFilled size={26} className="-rotate-12 text-purple-600" />
-      </Pointer>
-
       <div className="flex flex-col items-start justify-center size-full w-fit sm:w-full max-w-6xl mx-auto my-15 px-3 md:px-10 gap-1.5">
         <div className="mb-5 text-5xl sm:text-7xl font-semibold italic self-center">
           <Highlighter
