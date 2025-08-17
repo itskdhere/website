@@ -2,6 +2,7 @@
 
 import { Pointer } from "@/components/magicui/pointer";
 import { Highlighter } from "@/components/magicui/highlighter";
+import { RetroGrid } from "@/components/magicui/retro-grid";
 import GlassIcons from "@/components/blocks/Components/GlassIcons/GlassIcons";
 import { IconBulbFilled } from "@tabler/icons-react";
 import { contactItems } from "@/data/contact";
@@ -34,6 +35,10 @@ export default function Contact() {
             className="custom-class"
           />
         </div>
+      </div>
+
+      <div className="absolute h-[500px] w-full overflow-hidden -translate-y-80 -z-10">
+        <RetroGrid />
       </div>
     </section>
   );
