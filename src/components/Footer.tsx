@@ -1,5 +1,3 @@
-"use client";
-
 export default function Footer() {
   return (
     <footer id="footer" className="w-full translate-y-16" aria-label="Footer">

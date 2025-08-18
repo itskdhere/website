@@ -1,5 +1,3 @@
-"use client";
-
 import { Highlighter } from "@/components/magicui/highlighter";
 import { RetroGrid } from "@/components/magicui/retro-grid";
 import GlassIcons from "@/components/blocks/Components/GlassIcons/GlassIcons";

@@ -4,32 +4,33 @@ import LightRays from "@/components/blocks/Backgrounds/LightRays/LightRays";
 import SplitText from "@/components/blocks/TextAnimations/SplitText/SplitText";
 import { RippleButton } from "@/components/magicui/ripple-button";
 import { IconCloud } from "@/components/magicui/icon-cloud";
+import { useIsMobile } from "@/hooks/useIsMobile";
 import { heroData, heroIconSlugs } from "@/data/hero";
 
 export default function Hero() {
-  const iconCloudImages = heroIconSlugs.map(
-    (iconSlug) => `https://cdn.simpleicons.org/${iconSlug}/${iconSlug}`
-  );
+  const isMobile = useIsMobile();
 
   return (
     <section id="#" className="w-full h-screen" aria-label="Introduction">
       <div
-        className="absolute size-full pointer-events-none"
+        className="hidden sm:block absolute size-full pointer-events-none"
         aria-hidden="true"
       >
-        <LightRays
-          raysOrigin="top-center"
-          raysColor="#ffffff"
-          raysSpeed={1}
-          lightSpread={1}
-          rayLength={1}
-          followMouse={true}
-          mouseInfluence={0.1}
-          fadeDistance={1}
-          noiseAmount={0.1}
-          distortion={0.05}
-          saturation={0.6}
-        />
+        {!isMobile && (
+          <LightRays
+            raysOrigin="top-center"
+            raysColor="#ffffff"
+            raysSpeed={1}
+            lightSpread={1}
+            rayLength={1}
+            followMouse={true}
+            mouseInfluence={0.1}
+            fadeDistance={1}
+            noiseAmount={0.1}
+            distortion={0.05}
+            saturation={0.6}
+          />
+        )}
       </div>
 
       <div className="flex flex-col sm:flex-row items-center justify-center size-full max-w-6xl mx-auto px-3 md:px-10">
@@ -97,7 +98,14 @@ export default function Hero() {
         </div>
 
         <div className="hidden sm:flex flex-col sm:flex-row items-center justify-center overflow-hidden size-full">
-          <IconCloud images={iconCloudImages} />
+          {!isMobile && (
+            <IconCloud
+              images={heroIconSlugs.map(
+                (iconSlug) =>
+                  `https://cdn.simpleicons.org/${iconSlug}/${iconSlug}`
+              )}
+            />
+          )}
         </div>
       </div>
     </section>

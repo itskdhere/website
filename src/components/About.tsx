@@ -1,5 +1,3 @@
-"use client";
-
 import { Highlighter } from "@/components/magicui/highlighter";
 import { aboutBioData } from "@/data/about";
 

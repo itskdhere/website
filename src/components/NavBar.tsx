@@ -1,9 +1,7 @@
-"use client";
-
 import { FloatingDock } from "@/components/ui/floating-dock";
 import { navLinks, navItemClassName } from "@/data/navbar";
 
-export function NavBar() {
+export default function NavBar() {
   const links = navLinks.map((link) => ({
     ...link,
     className: navItemClassName,

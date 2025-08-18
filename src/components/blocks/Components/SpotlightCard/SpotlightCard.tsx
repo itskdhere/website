@@ -1,4 +1,6 @@
-import React, { useRef, useState } from "react";
+"use client";
+
+import { useState, useRef } from "react";
 
 interface Position {
   x: number;

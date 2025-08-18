@@ -1,5 +1,3 @@
-"use client";
-
 import { Highlighter } from "@/components/magicui/highlighter";
 import { MagicCard } from "@/components/magicui/magic-card";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";

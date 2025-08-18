@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { Highlighter } from "@/components/magicui/highlighter";
 import SpotlightCard from "@/components/blocks/Components/SpotlightCard/SpotlightCard";

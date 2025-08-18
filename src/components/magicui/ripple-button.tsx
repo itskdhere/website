@@ -1,6 +1,6 @@
 "use client";
 
-import React, { MouseEvent, useEffect, useState } from "react";
+import { useState, useEffect, forwardRef, type MouseEvent } from "react";
 import { cn } from "@/lib/utils";
 
 interface RippleButtonProps
@@ -9,10 +9,7 @@ interface RippleButtonProps
   duration?: string;
 }
 
-export const RippleButton = React.forwardRef<
-  HTMLButtonElement,
-  RippleButtonProps
->(
+export const RippleButton = forwardRef<HTMLButtonElement, RippleButtonProps>(
   (
     {
       className,
