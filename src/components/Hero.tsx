@@ -9,7 +9,7 @@ import { useIsMobile } from "@/hooks/useIsMobile";
 import { heroData, heroIconSlugs } from "@/data/hero";
 
 export default function Hero() {
-  const isMobile = useIsMobile();
+  const isMobile = useIsMobile(768);
 
   return (
     <section

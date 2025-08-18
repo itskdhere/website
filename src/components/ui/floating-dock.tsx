@@ -9,6 +9,7 @@ import {
   useSpring,
   useTransform,
 } from "motion/react";
+import { useIsMobile } from "@/hooks/useIsMobile";
 import { cn } from "@/lib/utils";
 
 export const FloatingDock = ({
@@ -33,17 +34,24 @@ const FloatingDockDesktop = ({
   className?: string;
 }) => {
   const mouseX = useMotionValue(Infinity);
+  const isMobile = useIsMobile(768);
+
   return (
     <motion.div
-      onMouseMove={(e) => mouseX.set(e.pageX)}
-      onMouseLeave={() => mouseX.set(Infinity)}
+      onMouseMove={(e) => !isMobile && mouseX.set(e.pageX)}
+      onMouseLeave={() => !isMobile && mouseX.set(Infinity)}
       className={cn(
         "flex items-start gap-3 sm:gap-4 rounded-xl sm:rounded-2xl h-14 sm:h-16 mx-auto px-2 sm:px-4 pt-2 sm:pt-3 bg-gray-50 dark:bg-neutral-900",
         className
       )}
     >
       {items.map((item) => (
-        <IconContainer mouseX={mouseX} key={item.title} {...item} />
+        <IconContainer
+          mouseX={mouseX}
+          key={item.title}
+          isMobile={isMobile}
+          {...item}
+        />
       ))}
     </motion.div>
   );
@@ -54,11 +62,13 @@ function IconContainer({
   title,
   icon,
   href,
+  isMobile,
 }: {
   mouseX: MotionValue;
   title: string;
   icon: React.ReactNode;
   href: string;
+  isMobile: boolean;
 }) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -113,14 +123,70 @@ function IconContainer({
   });
 
   const [hovered, setHovered] = useState(false);
+  const [mobilePressed, setMobilePressed] = useState(false);
+
+  const handleTouchStart = () => {
+    if (isMobile) {
+      setMobilePressed(true);
+      setHovered(true);
+    }
+  };
+
+  const handleTouchEnd = () => {
+    if (isMobile) {
+      setMobilePressed(false);
+      setTimeout(() => {
+        setHovered(false);
+      }, 150);
+    }
+  };
+
+  const handleMouseEnter = () => {
+    if (!isMobile) {
+      setHovered(true);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (!isMobile) {
+      setHovered(false);
+    }
+  };
+
+  const mobileWidth = useSpring(mobilePressed ? 80 : 40, {
+    mass: 0.1,
+    stiffness: 200,
+    damping: 15,
+  });
+  const mobileHeight = useSpring(mobilePressed ? 80 : 40, {
+    mass: 0.1,
+    stiffness: 200,
+    damping: 15,
+  });
+  const mobileIconWidth = useSpring(mobilePressed ? 40 : 20, {
+    mass: 0.1,
+    stiffness: 200,
+    damping: 15,
+  });
+  const mobileIconHeight = useSpring(mobilePressed ? 40 : 20, {
+    mass: 0.1,
+    stiffness: 200,
+    damping: 15,
+  });
 
   return (
     <a href={href} title={title} aria-label={title}>
       <motion.div
         ref={ref}
-        style={{ width, height, y }}
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
+        style={
+          isMobile
+            ? { width: mobileWidth, height: mobileHeight }
+            : { width, height, y }
+        }
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
         className="relative flex aspect-square items-center justify-center rounded-full bg-gray-200 dark:bg-neutral-800"
       >
         <AnimatePresence>
@@ -136,7 +202,11 @@ function IconContainer({
           )}
         </AnimatePresence>
         <motion.div
-          style={{ width: widthIcon, height: heightIcon }}
+          style={
+            isMobile
+              ? { width: mobileIconWidth, height: mobileIconHeight }
+              : { width: widthIcon, height: heightIcon }
+          }
           className="flex items-center justify-center"
         >
           {icon}

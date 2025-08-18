@@ -21,7 +21,7 @@ import { projectsData } from "@/data/projects";
 export default function Projects() {
   return (
     <section id="projects" className="w-full">
-      <div className="flex flex-col items-start justify-center size-full w-fit sm:w-full max-w-6xl mx-auto my-28 px-3 md:px-10 gap-1.5">
+      <div className="flex flex-col items-start justify-center size-full w-fit sm:w-full max-w-6xl mx-auto my-25 px-3 md:px-10 gap-1.5">
         <div className="mb-5 text-5xl sm:text-7xl font-semibold italic self-center">
           <Highlighter
             action="underline"

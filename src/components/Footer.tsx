@@ -10,7 +10,7 @@ export default function Footer() {
   }
 
   return (
-    <footer id="footer" className="w-full translate-y-16" aria-label="Footer">
+    <footer id="footer" className="w-full translate-y-15" aria-label="Footer">
       <p className="font-mono text-gray-200 text-center">
         &copy; {currentYear}{" "}
         <Button

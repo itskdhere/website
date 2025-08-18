@@ -9,7 +9,7 @@ export default function NavBar() {
   }));
 
   return (
-    <nav className="fixed flex items-center justify-center mt-10 w-full z-15 opacity-85">
+    <nav className="fixed flex items-center justify-center mt-5 w-full z-15 opacity-85">
       <FloatingDock items={links} />
     </nav>
   );
