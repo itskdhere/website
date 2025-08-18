@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import LightRays from "@/components/blocks/Backgrounds/LightRays/LightRays";
 import SplitText from "@/components/blocks/TextAnimations/SplitText/SplitText";
 import { RippleButton } from "@/components/magicui/ripple-button";
@@ -11,9 +12,13 @@ export default function Hero() {
   const isMobile = useIsMobile();
 
   return (
-    <section id="#" className="w-full h-screen" aria-label="Introduction">
+    <section
+      id="#"
+      className="w-full h-screen relative"
+      aria-label="Introduction"
+    >
       <div
-        className="hidden sm:block absolute size-full pointer-events-none"
+        className="hidden sm:block absolute inset-0 z-10 pointer-events-none"
         aria-hidden="true"
       >
         {!isMobile && (
@@ -33,7 +38,7 @@ export default function Hero() {
         )}
       </div>
 
-      <div className="flex flex-col sm:flex-row items-center justify-center size-full max-w-6xl mx-auto px-3 md:px-10">
+      <div className="relative z-5 flex flex-col sm:flex-row items-center justify-center size-full max-w-6xl mx-auto px-3 md:px-10">
         <div className="flex flex-row items-center justify-center size-full w-fit sm:w-full">
           <div className="flex flex-col items-start justify-center gap-1.5">
             <SplitText
@@ -92,7 +97,13 @@ export default function Hero() {
               rippleColor="#ADD8E6"
               className="mt-10 hover:cursor-pointer"
             >
-              {heroData.cta1}
+              <Link
+                href={heroData.cta1Link}
+                title={heroData.cta1Text}
+                aria-label={heroData.cta1Text}
+              >
+                {heroData.cta1Text}
+              </Link>
             </RippleButton>
           </div>
         </div>

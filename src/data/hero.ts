@@ -3,7 +3,8 @@ export const heroData = {
   name: "I'm Krishnendu Das",
   alias: "(a.k.a. kd / itskdhere)",
   role: "Full-Stack Developer",
-  cta1: "Learn more",
+  cta1Text: "Learn More",
+  cta1Link: "#about",
 };
 
 export const heroIconSlugs = [
