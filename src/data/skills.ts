@@ -1,19 +1,22 @@
-export const skillsData = [
+export const skillsData: {
+  category: string;
+  items: string[];
+}[] = [
   {
     category: "Languages",
     items: ["C", "C++", "TypeScript", "JavaScript", "SQL", "HCL"],
   },
   {
     category: "Frontend",
-    items: ["Next.js", "Vite", "React.js", "HTMX", "HTML5"],
+    items: ["Next.js", "React.js", "Vite", "HTMX", "HTML5"],
   },
   {
     category: "Styling",
-    items: ["Tailwind CSS", "GSAP", "SASS", "CSS3", "shadcn/ui"],
+    items: ["Tailwind CSS", "SASS", "CSS3", "shadcn/ui"],
   },
   {
     category: "APIs",
-    items: ["REST", "GraphQL", "WebSocket", "socket.io", "WebRTC"],
+    items: ["Axios", "REST", "GraphQL", "WebSocket", "socket.io", "WebRTC"],
   },
   {
     category: "Backend",
@@ -39,26 +42,42 @@ export const skillsData = [
       "Portainer",
       "Nginx",
       "Traefik",
+      "Tailscale",
     ],
   },
   {
-    category: "IaaS",
-    items: ["Google Cloud", "Azure"],
-  },
-  {
-    category: "BaaS",
-    items: ["Firebase", "Supabase", "Appwrite"],
-  },
-  {
-    category: "PaaS",
-    items: ["Cloudflare", "Vercel", "Netlify", "Render"],
+    category: "Cloud",
+    items: [
+      "GCP",
+      "Azure",
+      "Firebase",
+      "Supabase",
+      "Appwrite",
+      "Cloudflare",
+      "Vercel",
+    ],
   },
   {
     category: "IoT",
-    items: ["Arduino", "ESP8266", "ESP32", "Raspberry Pi", "Blynk"],
+    items: [
+      "Arduino",
+      "ATMega328p",
+      "ESP8266",
+      "ESP32",
+      "Raspberry Pi",
+      "Blynk",
+    ],
   },
   {
-    category: "Other",
-    items: ["Git", "GitHub", "Discord.js", "Postman", "Insomnia", "VMware"],
+    category: "Miscellaneous",
+    items: [
+      "Git",
+      "GitHub",
+      "VS Code",
+      "Postman",
+      "Insomnia",
+      "VMware",
+      "Linux",
+    ],
   },
 ];

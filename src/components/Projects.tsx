@@ -48,18 +48,22 @@ export default function Projects() {
               </CardHeader>
               <CardContent className="my-4">
                 <div>
-                  {project.techStack.map((item) => (
-                    <Badge
-                      key={item}
-                      className="text-sm px-1.5 mb-1 mr-1"
-                      variant="outline"
-                    >
-                      {item}
-                    </Badge>
-                  ))}
+                  {project.techStack.map((item, index) =>
+                    item.length == 0 ? (
+                      <br key={index} />
+                    ) : (
+                      <Badge
+                        key={item}
+                        className="text-sm px-1.5 mb-1 mr-1"
+                        variant="outline"
+                      >
+                        {item}
+                      </Badge>
+                    )
+                  )}
                 </div>
               </CardContent>
-              <CardFooter className="flex flex-row items-center justify-around">
+              <CardFooter className="flex flex-row items-center justify-around mt-5">
                 <ProjectButton url={project.link} />
                 <ProjectButton url={project.source} />
               </CardFooter>

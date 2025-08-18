@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { constructMetadata } from "@/data/meta";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,10 +13,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "KD",
-  description: "Developer etc.",
-};
+export const metadata: Metadata = constructMetadata();
 
 export default function RootLayout({
   children,
