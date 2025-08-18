@@ -8,8 +8,8 @@ import { skillsData } from "@/data/skills";
 
 export default function Skills() {
   return (
-    <section id="#skills" className="w-full">
-      <div className="flex flex-col items-start justify-center size-full w-fit sm:w-full max-w-6xl mx-auto my-15 px-3 md:px-10 gap-1.5">
+    <section id="skills" className="w-full">
+      <div className="flex flex-col items-start justify-center size-full w-fit sm:w-full max-w-6xl mx-auto my-28 px-3 md:px-10 gap-1.5">
         <div className="mb-5 text-5xl sm:text-7xl font-semibold italic self-center">
           <Highlighter
             action="underline"
