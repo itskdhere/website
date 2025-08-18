@@ -38,7 +38,12 @@ const GlassIcons: React.FC<GlassIconsProps> = ({ items, className }) => {
       }`}
     >
       {items.map((item, index) => (
-        <Link href={item.url} target="_blank" key={index}>
+        <Link
+          href={item.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          key={index}
+        >
           <button
             type="button"
             aria-label={item.label}

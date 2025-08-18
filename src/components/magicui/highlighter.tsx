@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { annotate } from "rough-notation";
 import type React from "react";
+import { annotate } from "rough-notation";
 
 // Define available annotation actions
 type AnnotationAction =

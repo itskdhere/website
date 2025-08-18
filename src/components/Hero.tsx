@@ -12,8 +12,11 @@ export default function Hero() {
   );
 
   return (
-    <section id="#" className="w-full h-screen">
-      <div className="absolute size-full pointer-events-none">
+    <section id="#" className="w-full h-screen" aria-label="Introduction">
+      <div
+        className="absolute size-full pointer-events-none"
+        aria-hidden="true"
+      >
         <LightRays
           raysOrigin="top-center"
           raysColor="#ffffff"

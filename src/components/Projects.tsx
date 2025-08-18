@@ -115,6 +115,7 @@ function ProjectButton({ url }: { url: string }) {
       <Link
         href={url}
         target="_blank"
+        rel="noopener noreferrer"
         className="flex items-center justify-center gap-2 size-fit"
       >
         <span className="translate-y-[1px]">{data.buttonIcon}</span>
