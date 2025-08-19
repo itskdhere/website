@@ -16,7 +16,14 @@ export const FloatingDock = ({
   items,
   desktopClassName,
 }: {
-  items: { title: string; icon: React.ReactNode; href: string }[];
+  items: {
+    title: string;
+    icon: React.ReactNode;
+    href: string;
+    isActive?: boolean;
+    color?: string;
+    onNavigate?: () => void;
+  }[];
   desktopClassName?: string;
 }) => {
   return (
@@ -30,7 +37,14 @@ const FloatingDockDesktop = ({
   items,
   className,
 }: {
-  items: { title: string; icon: React.ReactNode; href: string }[];
+  items: {
+    title: string;
+    icon: React.ReactNode;
+    href: string;
+    isActive?: boolean;
+    color?: string;
+    onNavigate?: () => void;
+  }[];
   className?: string;
 }) => {
   const mouseX = useMotionValue(Infinity);
@@ -63,12 +77,18 @@ function IconContainer({
   icon,
   href,
   isMobile,
+  isActive = false,
+  color = "#6b7280",
+  onNavigate,
 }: {
   mouseX: MotionValue;
   title: string;
   icon: React.ReactNode;
   href: string;
   isMobile: boolean;
+  isActive?: boolean;
+  color?: string;
+  onNavigate?: () => void;
 }) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -174,8 +194,32 @@ function IconContainer({
     damping: 15,
   });
 
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (onNavigate) {
+      onNavigate();
+    }
+
+    const targetId = href.replace("#", "");
+
+    if (targetId === "" || href === "#") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    } else {
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }
+  };
+
   return (
-    <a href={href} title={title} aria-label={title}>
+    <a href={href} title={title} aria-label={title} onClick={handleClick}>
       <motion.div
         ref={ref}
         style={
@@ -187,7 +231,7 @@ function IconContainer({
         onMouseLeave={handleMouseLeave}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
-        className="relative flex aspect-square items-center justify-center rounded-full bg-gray-200 dark:bg-neutral-800"
+        className="relative flex aspect-square items-center justify-center rounded-full bg-gray-200 dark:bg-neutral-800 transition-colors duration-200"
       >
         <AnimatePresence>
           {hovered && (
@@ -202,12 +246,16 @@ function IconContainer({
           )}
         </AnimatePresence>
         <motion.div
-          style={
-            isMobile
+          style={{
+            ...(isMobile
               ? { width: mobileIconWidth, height: mobileIconHeight }
-              : { width: widthIcon, height: heightIcon }
-          }
-          className="flex items-center justify-center"
+              : { width: widthIcon, height: heightIcon }),
+            color: isActive ? color : undefined,
+          }}
+          className={cn(
+            "flex items-center justify-center transition-colors duration-200",
+            isActive ? "" : "text-neutral-500 dark:text-neutral-300"
+          )}
         >
           {icon}
         </motion.div>

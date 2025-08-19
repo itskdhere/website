@@ -13,7 +13,7 @@ export default function Hero() {
 
   return (
     <section
-      id="#"
+      id=""
       className="w-full h-screen relative"
       aria-label="Introduction"
     >
