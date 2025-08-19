@@ -16,6 +16,7 @@ import {
   IconPackage,
   IconBrandGithub,
 } from "@tabler/icons-react";
+import { navLinks } from "@/data/navbar";
 import { projectsData } from "@/data/projects";
 
 export default function Projects() {
@@ -25,11 +26,11 @@ export default function Projects() {
         <div className="mb-5 text-5xl sm:text-7xl font-semibold italic self-center">
           <Highlighter
             action="underline"
-            color="#9333ea"
+            color={navLinks[3].color}
             strokeWidth={2}
             iterations={3}
           >
-            Projects
+            {navLinks[3].title}
           </Highlighter>
         </div>
 

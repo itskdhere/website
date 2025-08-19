@@ -11,33 +11,38 @@ export const navItemClassName =
 
 export const navLinks = [
   {
+    id: "",
     title: "Home",
-    icon: IconHome,
     href: "",
+    icon: IconHome,
     color: "#fff",
   },
   {
+    id: "about",
     title: "About",
-    icon: IconInfoCircle,
     href: "#about",
+    icon: IconInfoCircle,
     color: "#14b8a6",
   },
   {
+    id: "skills",
     title: "Skills",
-    icon: IconBulb,
     href: "#skills",
+    icon: IconBulb,
     color: "#ff9800",
   },
   {
+    id: "projects",
     title: "Projects",
-    icon: IconTools,
     href: "#projects",
+    icon: IconTools,
     color: "#9333ea",
   },
   {
+    id: "contact",
     title: "Contact",
-    icon: IconMail,
     href: "#contact",
+    icon: IconMail,
     color: "#84cc16",
   },
 ];

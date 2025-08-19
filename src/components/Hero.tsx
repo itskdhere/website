@@ -6,6 +6,7 @@ import SplitText from "@/components/blocks/TextAnimations/SplitText/SplitText";
 import { RippleButton } from "@/components/magicui/ripple-button";
 import { IconCloud } from "@/components/magicui/icon-cloud";
 import { useIsMobile } from "@/hooks/useIsMobile";
+import { navLinks } from "@/data/navbar";
 import { heroData, heroIconSlugs } from "@/data/hero";
 
 export default function Hero() {
@@ -13,7 +14,7 @@ export default function Hero() {
 
   return (
     <section
-      id=""
+      id={navLinks[0].id}
       className="w-full h-screen relative"
       aria-label="Introduction"
     >

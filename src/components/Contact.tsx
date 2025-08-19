@@ -1,6 +1,7 @@
 import { Highlighter } from "@/components/magicui/highlighter";
 import { RetroGrid } from "@/components/magicui/retro-grid";
 import GlassIcons from "@/components/blocks/Components/GlassIcons/GlassIcons";
+import { navLinks } from "@/data/navbar";
 import { contactItems } from "@/data/contact";
 
 export default function Contact() {
@@ -10,11 +11,11 @@ export default function Contact() {
         <div className="mb-5 text-5xl sm:text-7xl font-semibold italic self-center">
           <Highlighter
             action="underline"
-            color="#84cc16"
+            color={navLinks[4].color}
             strokeWidth={2}
             iterations={3}
           >
-            Contact
+            {navLinks[4].title}
           </Highlighter>
         </div>
 

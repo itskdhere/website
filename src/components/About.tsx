@@ -1,4 +1,5 @@
 import { Highlighter } from "@/components/magicui/highlighter";
+import { navLinks } from "@/data/navbar";
 import { aboutBioData } from "@/data/about";
 
 export default function About() {
@@ -8,11 +9,11 @@ export default function About() {
         <div className="mb-5 text-5xl sm:text-7xl font-semibold italic self-center">
           <Highlighter
             action="underline"
-            color="#14b8a6"
+            color={navLinks[1].color}
             strokeWidth={2}
             iterations={3}
           >
-            About Me
+            {navLinks[1].title}
           </Highlighter>
         </div>
 

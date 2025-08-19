@@ -2,6 +2,7 @@ import { Highlighter } from "@/components/magicui/highlighter";
 import { MagicCard } from "@/components/magicui/magic-card";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { navLinks } from "@/data/navbar";
 import { skillsData } from "@/data/skills";
 
 export default function Skills() {
@@ -11,11 +12,11 @@ export default function Skills() {
         <div className="mb-5 text-5xl sm:text-7xl font-semibold italic self-center">
           <Highlighter
             action="underline"
-            color="#ff9800"
+            color={navLinks[2].color}
             strokeWidth={2}
             iterations={3}
           >
-            Skills
+            {navLinks[2].title}
           </Highlighter>
         </div>
 
