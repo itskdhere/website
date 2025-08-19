@@ -3,7 +3,7 @@ import {
   IconBrandX,
   IconBrandGithub,
   IconBrandNpm,
-  IconBrandReddit,
+  IconBrandDocker,
   IconBrandInstagram,
 } from "@tabler/icons-react";
 
@@ -21,6 +21,12 @@ export const contactItems = [
     url: "https://x.com/itskdhere",
   },
   {
+    icon: IconBrandInstagram,
+    color: "linear-gradient(to right, #833ab4, #fd1d1d, #fcb045)",
+    label: "@itskdhere",
+    url: "https://www.instagram.com/itskdhere",
+  },
+  {
     icon: IconBrandGithub,
     color: "#333",
     label: "itskdhere",
@@ -33,15 +39,9 @@ export const contactItems = [
     url: "https://www.npmjs.com/~itskdhere",
   },
   {
-    icon: IconBrandReddit,
-    color: "#ff4500",
+    icon: IconBrandDocker,
+    color: "#1d63ed",
     label: "u/itskdhere",
-    url: "https://www.reddit.com/u/itskdhere",
-  },
-  {
-    icon: IconBrandInstagram,
-    color: "linear-gradient(to right, #833ab4, #fd1d1d, #fcb045)",
-    label: "@itskdhere",
-    url: "https://www.instagram.com/itskdhere",
+    url: "https://hub.docker.com/u/itskdhere",
   },
 ];
