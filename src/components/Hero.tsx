@@ -10,7 +10,7 @@ import { navLinks } from "@/data/navbar";
 import { heroData, heroIconSlugs } from "@/data/hero";
 
 export default function Hero() {
-  const isMobile = useIsMobile(768);
+  const isMobile = useIsMobile(640);
 
   return (
     <section

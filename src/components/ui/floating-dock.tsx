@@ -48,7 +48,7 @@ const FloatingDockDesktop = ({
   className?: string;
 }) => {
   const mouseX = useMotionValue(Infinity);
-  const isMobile = useIsMobile(768);
+  const isMobile = useIsMobile(640);
 
   return (
     <motion.div
