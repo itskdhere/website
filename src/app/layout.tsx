@@ -18,7 +18,7 @@ const metaConst = {
   title: "KD",
   description: "Full-Stack Developer etc.",
   icons: "/favicon.ico",
-  image: "/banner.png",
+  images: [`${process.env.NEXT_PUBLIC_APP_URL!}/banner.png`],
   url: new URL(process.env.NEXT_PUBLIC_APP_URL!),
 };
 
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: metaConst.title,
     description: metaConst.description,
-    images: metaConst.image,
+    images: metaConst.images,
     type: "website",
     url: metaConst.url,
     siteName: metaConst.title,
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   twitter: {
     title: metaConst.title,
     description: metaConst.description,
-    images: [metaConst.image],
+    images: metaConst.images,
     card: "summary_large_image",
     creator: "@itskdhere",
   },
