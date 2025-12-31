@@ -4,7 +4,7 @@ export const skillsData: {
 }[] = [
   {
     category: "Languages",
-    items: ["C", "C++", "TypeScript", "JavaScript", "SQL", "HCL"],
+    items: ["C", "C++", "TypeScript", "JavaScript", "SQL", "HCL", "Bash"],
   },
   {
     category: "Frontend",
@@ -12,7 +12,7 @@ export const skillsData: {
   },
   {
     category: "Styling",
-    items: ["Tailwind CSS", "SASS", "CSS3", "shadcn/ui"],
+    items: ["CSS3", "SASS", "Tailwind CSS", "shadcn/ui"],
   },
   {
     category: "APIs",
@@ -43,13 +43,14 @@ export const skillsData: {
       "Nginx",
       "Traefik",
       "Tailscale",
+      "Netdata",
     ],
   },
   {
     category: "Cloud",
     items: [
-      "GCP",
-      "Azure",
+      "Google Cloud",
+      "Railway",
       "Firebase",
       "Supabase",
       "Appwrite",

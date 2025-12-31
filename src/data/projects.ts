@@ -52,7 +52,7 @@ export const projectsData = [
       "BigQuery",
       "Cloud Run",
     ],
-    link: "https://quickaid.turing-devs.tech",
+    link: "https://quickaid.itskdhere.com",
     source: "https://github.com/itskdhere/QuickAid",
   },
 ];
