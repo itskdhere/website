@@ -15,24 +15,22 @@ const geistMono = Geist_Mono({
 });
 
 const metaConst = {
-  title: "KD",
-  description: "Full-Stack Developer etc.",
-  icons: "/favicon.ico",
+  title: "Krishnendu Das (itskdhere)",
+  description: "Full-Stack Developer | DevOps | Self-Hosting | Web Security",
+  icons: "/logo.png",
   images: [`${process.env.NEXT_PUBLIC_APP_URL!}/banner.png`],
   url: new URL(process.env.NEXT_PUBLIC_APP_URL!),
 };
 
 export const metadata: Metadata = {
+  metadataBase: metaConst.url,
   title: metaConst.title,
   description: metaConst.description,
-  icons: metaConst.icons,
-  keywords: ["KD", "itskdhere"],
+  keywords: ["Krishnendu Das", "KD", "itskdhere"],
   robots: "index, follow",
-  authors: [{ name: "KD", url: metaConst.url }],
-  metadataBase: metaConst.url,
-  alternates: {
-    canonical: metaConst.url,
-  },
+  creator: "Krishnendu Das",
+  authors: [{ name: "Krishnendu Das", url: metaConst.url }],
+  icons: metaConst.icons,
   openGraph: {
     title: metaConst.title,
     description: metaConst.description,
@@ -47,6 +45,9 @@ export const metadata: Metadata = {
     images: metaConst.images,
     card: "summary_large_image",
     creator: "@itskdhere",
+  },
+  alternates: {
+    canonical: metaConst.url,
   },
 };
 
