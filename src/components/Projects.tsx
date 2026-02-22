@@ -21,14 +21,18 @@ import { projectsData } from "@/data/projects";
 
 export default function Projects() {
   return (
-    <section id="projects" className="w-full">
-      <div className="flex flex-col items-start justify-center size-full w-fit sm:w-full max-w-6xl mx-auto my-25 px-3 md:px-10 gap-1.5">
-        <div className="mb-5 text-5xl sm:text-7xl font-semibold italic self-center">
+    <section
+      id={navLinks[3].id}
+      className="w-full"
+      aria-label={navLinks[3].title}
+    >
+      <div className="flex flex-col items-start justify-center size-full w-fit sm:w-full max-w-5xl mx-auto my-20 px-3 md:px-10 gap-1.5">
+        <div className="mb-5 text-3xl sm:text-5xl font-semibold italic self-center">
           <Highlighter
             action="underline"
             color={navLinks[3].color}
             strokeWidth={2}
-            iterations={3}
+            isView={true}
           >
             {navLinks[3].title}
           </Highlighter>
@@ -38,7 +42,7 @@ export default function Projects() {
           {projectsData.map((project) => (
             <SpotlightCard
               key={project.title}
-              className="w-full"
+              className="w-full py-6"
               spotlightColor="rgba(147, 51, 234, 0.25)"
             >
               <CardHeader>

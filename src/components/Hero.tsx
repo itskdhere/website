@@ -16,7 +16,7 @@ export default function Hero() {
     <section
       id={navLinks[0].id}
       className="w-full h-screen relative"
-      aria-label="Introduction"
+      aria-label={navLinks[0].title}
     >
       <div
         className="hidden sm:block absolute inset-0 z-10 pointer-events-none"
@@ -39,8 +39,8 @@ export default function Hero() {
         )}
       </div>
 
-      <div className="relative z-5 flex flex-col sm:flex-row items-center justify-center size-full max-w-6xl mx-auto px-3 md:px-10">
-        <div className="flex flex-row items-center justify-center size-full w-fit sm:w-full">
+      <div className="relative z-5 flex flex-col sm:flex-row items-center justify-center size-full max-w-5xl mx-auto px-3 md:px-10">
+        <div className="flex flex-row items-center justify-between size-full w-fit sm:w-full">
           <div className="flex flex-col items-start justify-center gap-1.5">
             <SplitText
               text={heroData.greeting}
@@ -94,22 +94,23 @@ export default function Hero() {
               rootMargin="-100px"
               textAlign="center"
             />
-            <RippleButton
-              rippleColor="#ADD8E6"
-              className="mt-10 hover:cursor-pointer"
+
+            <Link
+              href={heroData.cta1Link}
+              title={heroData.cta1Text}
+              aria-label={heroData.cta1Text}
             >
-              <Link
-                href={heroData.cta1Link}
-                title={heroData.cta1Text}
-                aria-label={heroData.cta1Text}
+              <RippleButton
+                rippleColor="#ADD8E6"
+                className="mt-10 hover:cursor-pointer"
               >
                 {heroData.cta1Text}
-              </Link>
-            </RippleButton>
+              </RippleButton>
+            </Link>
           </div>
         </div>
 
-        <div className="hidden sm:flex flex-col sm:flex-row items-center justify-center overflow-hidden size-full">
+        <div className="hidden sm:flex flex-col sm:flex-row items-center justify-end overflow-hidden size-full">
           {!isMobile && (
             <IconCloud
               images={heroIconSlugs.map(

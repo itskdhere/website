@@ -7,14 +7,18 @@ import { skillsData } from "@/data/skills";
 
 export default function Skills() {
   return (
-    <section id="skills" className="w-full" aria-label="Skills">
-      <div className="flex flex-col items-start justify-center size-full w-fit sm:w-full max-w-6xl mx-auto my-25 px-3 md:px-10 gap-1.5">
-        <div className="mb-5 text-5xl sm:text-7xl font-semibold italic self-center">
+    <section
+      id={navLinks[2].id}
+      className="w-full"
+      aria-label={navLinks[2].title}
+    >
+      <div className="flex flex-col items-start justify-center size-full w-fit sm:w-full max-w-5xl mx-auto my-20 px-3 md:px-10 gap-1.5">
+        <div className="mb-5 text-3xl sm:text-5xl font-semibold italic self-center">
           <Highlighter
             action="underline"
             color={navLinks[2].color}
             strokeWidth={2}
-            iterations={3}
+            isView={true}
           >
             {navLinks[2].title}
           </Highlighter>
@@ -26,11 +30,11 @@ export default function Skills() {
               key={skills.category}
               className="col-span-1 size-full p-0 shadow-none border-none"
             >
-              <MagicCard gradientColor="#252525" className="size-full">
-                <CardHeader className="p-4">
+              <MagicCard gradientColor="#252525" className="size-full py-6">
+                <CardHeader className="mb-4">
                   <CardTitle>{skills.category}</CardTitle>
                 </CardHeader>
-                <CardContent className="p-4">
+                <CardContent>
                   {skills.items.map((item) => (
                     <Badge
                       key={item}
