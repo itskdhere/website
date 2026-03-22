@@ -15,6 +15,29 @@ export const projectsData = [
     link: "https://www.npmjs.com/package/dsmt",
     source: "https://github.com/itskdhere/dsmt",
   },
+  {
+    title: "NoBG",
+    description:
+      "An open-source, full-stack application designed to automatically remove backgrounds from images. Built with a Next.js frontend and a fast Python worker, it orchestrates image processing jobs using Redis and Vercel Blob storage via an event-driven, decoupled architecture utilizing message queues.",
+    techStack: [
+      "TypeScript",
+      "Next.js",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Better Auth",
+      "Prisma",
+      "PostgreSQL",
+      "Redis",
+      "Vercel Blob",
+      "Python",
+      "Pillow",
+      "Rembg",
+      "Docker",
+      "Turborepo",
+    ],
+    link: "https://nobg.itskdhere.com",
+    source: "https://github.com/itskdhere/NoBG",
+  },
   // {
   //   title: "QuickAid",
   //   description:

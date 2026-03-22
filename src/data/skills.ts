@@ -9,6 +9,7 @@ export const skillsData: {
       "C++",
       "TypeScript",
       "JavaScript",
+      "Python",
       "SQL",
       "Bash",
       "HCL",

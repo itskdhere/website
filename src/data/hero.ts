@@ -13,6 +13,7 @@ export const heroIconSlugs = [
   "cplusplus",
   "typescript",
   "javascript",
+  "python",
   "gnubash",
   "hashicorp",
   "yaml",
