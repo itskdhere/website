@@ -113,10 +113,7 @@ export default function Hero() {
         <div className="hidden sm:flex flex-col sm:flex-row items-center justify-end overflow-hidden size-full">
           {!isMobile && (
             <IconCloud
-              images={heroIconSlugs.map(
-                (iconSlug) =>
-                  `https://cdn.simpleicons.org/${iconSlug}/${iconSlug}`
-              )}
+              images={heroIconSlugs.map((iconSlug) => `/icons/${iconSlug}.svg`)}
             />
           )}
         </div>
