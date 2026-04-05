@@ -18,7 +18,7 @@ export const projectsData = [
   {
     title: "NoBG",
     description:
-      "An open-source, full-stack application designed to automatically remove backgrounds from images. Built with a Next.js frontend and a fast Python worker, it orchestrates image processing jobs using Redis and Vercel Blob storage via an event-driven, decoupled architecture utilizing message queues.",
+      "An open-source, full-stack application designed to automatically remove backgrounds from images. Built with a Next.js frontend and a fast Python worker, it orchestrates image processing jobs using Redis and UploadThing storage via an event-driven, decoupled architecture utilizing message queues.",
     techStack: [
       "TypeScript",
       "Next.js",
@@ -28,7 +28,7 @@ export const projectsData = [
       "Prisma",
       "PostgreSQL",
       "Redis",
-      "Vercel Blob",
+      "UploadThing",
       "Python",
       "Pillow",
       "Rembg",
