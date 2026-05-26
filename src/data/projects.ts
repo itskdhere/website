@@ -16,6 +16,14 @@ export const projectsData = [
     source: "https://github.com/itskdhere/dsmt",
   },
   {
+    title: "GitID",
+    description:
+      "A Visual Studio Code Extension to Manage and Switch Multiple Git Identities.",
+    techStack: ["Typescript", "Node.js", "Visual Studio Code Extension API"],
+    link: "https://marketplace.visualstudio.com/items?itemName=itskdhere.gitid",
+    source: "https://github.com/itskdhere/vscode-gitid",
+  },
+  {
     title: "NoBG",
     description:
       "An open-source, full-stack application designed to automatically remove backgrounds from images. Built with a Next.js frontend and a fast Python worker, it orchestrates image processing jobs using Redis and UploadThing storage via an event-driven, decoupled architecture utilizing message queues.",

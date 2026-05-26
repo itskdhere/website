@@ -14,6 +14,7 @@ import {
   IconLink,
   IconWorld,
   IconPackage,
+  IconBrandVscode,
   IconBrandGithub,
 } from "@tabler/icons-react";
 import { navLinks } from "@/data/navbar";
@@ -100,6 +101,11 @@ function ProjectButton({ url }: { url: string }) {
       data.buttonIcon = <IconBrandGithub size={20} />;
       data.buttonText = "Source Code";
       data.buttonType = "outline";
+      break;
+    case "marketplace.visualstudio.com":
+      data.buttonIcon = <IconBrandVscode size={20} />;
+      data.buttonText = "Visual Studio Marketplace";
+      data.buttonType = "secondary";
       break;
     case "npmjs.com":
       data.buttonIcon = <IconPackage size={25} />;

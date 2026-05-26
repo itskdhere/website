@@ -4,7 +4,7 @@ import {
   IconBrandGithub,
   IconBrandNpm,
   IconBrandDocker,
-  IconBrandInstagram,
+  IconBrandVscode,
 } from "@tabler/icons-react";
 
 export const contactItems = [
@@ -17,14 +17,8 @@ export const contactItems = [
   {
     icon: IconBrandX,
     color: "#1d9bf0",
-    label: "@itskdhere",
+    label: "itskdhere",
     url: "https://x.com/itskdhere",
-  },
-  {
-    icon: IconBrandInstagram,
-    color: "linear-gradient(to right, #833ab4, #fd1d1d, #fcb045)",
-    label: "@itskdhere",
-    url: "https://www.instagram.com/itskdhere",
   },
   {
     icon: IconBrandGithub,
@@ -43,5 +37,11 @@ export const contactItems = [
     color: "#1d63ed",
     label: "u/itskdhere",
     url: "https://hub.docker.com/u/itskdhere",
+  },
+  {
+    icon: IconBrandVscode,
+    color: "#0065A9",
+    label: "itskdhere",
+    url: "https://marketplace.visualstudio.com/publishers/itskdhere",
   },
 ];
