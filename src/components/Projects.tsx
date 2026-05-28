@@ -104,7 +104,7 @@ function ProjectButton({ url }: { url: string }) {
       break;
     case "marketplace.visualstudio.com":
       data.buttonIcon = <IconBrandVscode size={20} />;
-      data.buttonText = "Visual Studio Marketplace";
+      data.buttonText = "VS Marketplace";
       data.buttonType = "secondary";
       break;
     case "npmjs.com":
