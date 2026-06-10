@@ -4,17 +4,7 @@ export const skillsData: {
 }[] = [
   {
     category: "Languages",
-    items: [
-      "C",
-      "C++",
-      "TypeScript",
-      "JavaScript",
-      "Python",
-      "SQL",
-      "Bash",
-      "HCL",
-      "YAML",
-    ],
+    items: ["C", "C++", "TypeScript", "JavaScript", "Python", "SQL", "Bash"],
   },
   {
     category: "Frontend",
@@ -86,7 +76,7 @@ export const skillsData: {
       "Turborepo",
       "Git",
       "GitHub",
-      "VS Code",
+      "VS Code Extension API",
       "Postman",
       "Linux",
       "VMware Workstation",
