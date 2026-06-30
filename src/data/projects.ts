@@ -1,6 +1,6 @@
 export const projectsData = [
   {
-    title: "Docker Storage Migration Tool",
+    title: "Docker Storage Migration Tool (DSMT)",
     description:
       "A command-line utility for seamlessly exporting and importing Docker volumes and bind mounts.",
     techStack: [
@@ -12,16 +12,8 @@ export const projectsData = [
       "Axios",
       "Docker Engine API",
     ],
-    link: "https://www.npmjs.com/package/dsmt",
+    link: "https://dsmt.itskdhere.com",
     source: "https://github.com/itskdhere/dsmt",
-  },
-  {
-    title: "GitID",
-    description:
-      "A Visual Studio Code Extension to Manage and Switch Multiple Git Identities.",
-    techStack: ["Typescript", "Node.js", "Visual Studio Code Extension API"],
-    link: "https://marketplace.visualstudio.com/items?itemName=itskdhere.gitid",
-    source: "https://github.com/itskdhere/vscode-gitid",
   },
   {
     title: "NoBG",
@@ -45,6 +37,14 @@ export const projectsData = [
     ],
     link: "https://nobg.itskdhere.com",
     source: "https://github.com/itskdhere/NoBG",
+  },
+  {
+    title: "GitID",
+    description:
+      "A Visual Studio Code Extension to Manage and Switch Multiple Git Identities.",
+    techStack: ["Typescript", "Node.js", "Visual Studio Code Extension API"],
+    link: "https://marketplace.visualstudio.com/items?itemName=itskdhere.gitid",
+    source: "https://github.com/itskdhere/vscode-gitid",
   },
   // {
   //   title: "QuickAid",

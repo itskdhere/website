@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 const metaConst = {
   title: "Krishnendu Das (itskdhere)",
   description: "Full-Stack Developer | DevOps | Self-Hosting | Web Security",
-  icons: "/logo.png",
+  icons: "/logo.jpg",
   images: [`${process.env.NEXT_PUBLIC_APP_URL!}/banner.png`],
   url: new URL(process.env.NEXT_PUBLIC_APP_URL!),
 };
